@@ -1,4 +1,4 @@
-module gitlab.commonbond.co/CB4B/go-gql-cli
+module gitlab.commonbond.co/CB4B/go-gql-client
 
 go 1.13
 
