@@ -1,6 +1,4 @@
-# graphql [![GoDoc](https://godoc.org/github.com/machinebox/graphql?status.png)](http://godoc.org/github.com/machinebox/graphql) [![Build Status](https://travis-ci.org/machinebox/graphql.svg?branch=master)](https://travis-ci.org/machinebox/graphql) [![Go Report Card](https://goreportcard.com/badge/github.com/machinebox/graphql)](https://goreportcard.com/report/github.com/machinebox/graphql)
-
-Low-level GraphQL client for Go.
+Low-level GraphQL client for Go. Fork of github.com/machinebox/graphql
 
 * Simple, familiar API
 * Respects `context.Context` timeouts and cancellation
@@ -22,7 +20,7 @@ $ go get github.com/machinebox/graphql
 import "context"
 
 // create a client (safe to share across requests)
-client := graphql.NewClient("https://machinebox.io/graphql")
+client := graphql.NewClient("https://gql-api/")
 
 // make a request
 req := graphql.NewRequest(`
@@ -57,11 +55,6 @@ By default, the package will send a JSON body. To enable the sending of files, y
 use multipart form data instead using the `UseMultipartForm` option when you create your `Client`:
 
 ```
-client := graphql.NewClient("https://machinebox.io/graphql", graphql.UseMultipartForm())
+client := graphql.NewClient("https://gql-api/", graphql.UseMultipartForm())
 ```
 
-For more information, [read the godoc package documentation](http://godoc.org/github.com/machinebox/graphql) or the [blog post](https://blog.machinebox.io/a-graphql-client-library-for-go-5bffd0455878).
-
-## Thanks
-
-Thanks to [Chris Broadfoot](https://github.com/broady) for design help.
